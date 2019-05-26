@@ -1741,7 +1741,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
     background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
     background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
-    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#FFFFFFFF', endColorstr='#cc000000', GradientType=0);
 }
 
 .s-home .overlay {
@@ -3041,7 +3041,7 @@ html.no-csstransitions .home-content__main {
 
 .s-contact {
     background-color: #151515;
-    background-image: url("../images/contact-bg.jpg");
+    background-image: url("../images/aagii-bg.jpg");
     background-repeat: no-repeat;
     background-position: center, center;
     padding-top: 13.2rem;
