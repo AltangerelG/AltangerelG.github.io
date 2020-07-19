@@ -161,9 +161,9 @@
                     $titleText = '<h4>' + $.trim($title.html()) + '</h4>',
                     $captionText = $.trim($caption.html()),
                     $href = $thumbLink.attr('href'),
-                    $size = $thumbLink.data('size').split('x'),
-                    $width  = $size[0],
-                    $height = $size[1];
+                    // $size = $thumbLink.data('size').split('x'),
+                    $width  = 300,
+                    $height = 400;
          
                 var item = {
                     src  : $href,
@@ -343,45 +343,7 @@
         
             /* submit via ajax */
             submitHandler: function(form) {
-    
-                var sLoader = $('.submit-loader');
-    
-                $.ajax({
-    
-                    type: "POST",
-                    url: "inc/sendEmail.php",
-                    data: $(form).serialize(),
-                    beforeSend: function() { 
-    
-                        sLoader.slideDown("slow");
-    
-                    },
-                    success: function(msg) {
-    
-                        // Message was sent
-                        if (msg == 'OK') {
-                            sLoader.slideUp("slow"); 
-                            $('.message-warning').fadeOut();
-                            $('#contactForm').fadeOut();
-                            $('.message-success').fadeIn();
-                        }
-                        // There was an error
-                        else {
-                            sLoader.slideUp("slow"); 
-                            $('.message-warning').html(msg);
-                            $('.message-warning').slideDown("slow");
-                        }
-    
-                    },
-                    error: function() {
-    
-                        sLoader.slideUp("slow"); 
-                        $('.message-warning').html("Something went wrong. Please try again.");
-                        $('.message-warning').slideDown("slow");
-    
-                    }
-    
-                });
+                window.open('mailto:mr.tuulai@gmail.com?subject=' + form.contactSubject.value + '&body=' + form.contactName.value + ' ' + form.contactMessage.value);
             }
     
         });
