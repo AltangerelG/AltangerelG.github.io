@@ -1,0 +1,128 @@
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+body {
+    background-color: rgba(184, 184, 184, 0.33);
+    font-size: 24px;
+    padding: 20px;
+}
+
+.faqHeader {
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.faqSubHeader {
+    font-size: 18px;
+    font-weight: bold;
+    padding-bottom: 8px;
+    color: #555555;
+}
+
+.proOnly {
+    font-size: 12px;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    display: inline-block; 
+    margin-bottom: 7px;
+    color: #FFFFFF;
+    background-color: #777777;
+}
+
+.faqQuestion {
+    padding-bottom: 6px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.faqQuestionProOnly {
+    font-weight: bold;
+    font-size: 17px;
+    margin-bottom: -5px;
+}
+
+.faqAnswer {
+    margin-bottom: 42px;
+    margin-left: 16px;
+    font-size: 16px;
+}
+
+.videoLink {
+    margin-left: 32px;
+    font-size: 16px;
+}
+
+.spaceBelowFirstVideo {
+    margin-bottom: 8px;   
+}
+
+.orderedList {
+    margin: 0px;
+    padding-left: 32px;
+    font-size: 16px;
+    margin-bottom: 42px;
+}
+
+.listItem {
+    padding-bottom: 5px;
+}
+
+.caption {
+    padding-bottom: 30px;
+    font-size: 22px;
+}
+
+img.img-with-caption {
+    padding-top: 15px;
+    padding-bottom: 30px;
+}
+
+img.img-no-caption {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 510px;
+}
+
+
+p {
+    margin: 10px auto;
+    text-align: center;
+    width: 450px;
+}
+
+.toc {
+    font-size: 20px;
+    padding-bottom: 6px;
+}
+
+
+
+
+@media screen and (max-width: 510px) {
+    img {
+        display: block;
+        width: 100%;
+        margin: 0;
+    }
+
+
+    p {
+        width: 90%;
+        margin: auto;
+    }
+
+}
+
+
+

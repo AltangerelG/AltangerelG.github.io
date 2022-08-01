@@ -1,396 +1,310 @@
-/* ===================================================================
- * Hola - Main JS
- *
- * ------------------------------------------------------------------- */
+var page = $("html, body");
+var lastScrollTop = 0;
 
-(function($) {
+initializeHeaderMenuButtons();
+initializeSortMenuButtons();
+initializeProjectButtons();
 
-    "use strict";
+//Preloads images in the carousels so they're hopefully ready when the user wants to see them. This must come before we call the function below.
+$.preload = function() {
+    for (var i = 0; i < arguments.length; i++) {
+        $("<img />").attr("src", arguments[i]);
+    }
+};
 
-    var cfg = {
-        scrollDuration : 800, // smoothscroll duration
-        mailChimpURL   : ''   // mailchimp url
-    },
-
-    $WIN = $(window);
-
-    // Add the User Agent to the <html>
-    // will be used for IE10 detection (Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0))
-    var doc = document.documentElement;
-    doc.setAttribute('data-useragent', navigator.userAgent);
-
-
-    /* Preloader
-     * -------------------------------------------------- */
-    var ssPreloader = function() {
-
-        $("html").addClass('ss-preload');
-
-        $WIN.on('load', function() {
-
-            // force page scroll position to top at page refresh
-            // $('html, body').animate({ scrollTop: 0 }, 'normal');
-
-            // will first fade out the loading animation 
-            $("#loader").fadeOut("slow", function() {
-                // will fade out the whole DIV that covers the website.
-                $("#preloader").delay(300).fadeOut("slow");
-            }); 
-            
-            // for hero content animations 
-            $("html").removeClass('ss-preload');
-            $("html").addClass('ss-loaded');
-        
-        });
-    };
+$.preload("img/project1/1.jpg", "img/project1/2.jpg", 
+	"img/project1/3.jpg", "img/project1/4.jpg",
+"img/project1/5.jpg", "img/project1/6.jpg", "img/project1/7.jpg",
+"img/project1/8.jpg", "img/project2/1.jpg", "img/project2/2.jpg",
+"img/project2/3.jpg", "img/project2/4.jpg", "img/project3/1.jpg",
+"img/project3/2.jpg", "img/project3/3.jpg", "img/project3/4.jpg",
+"img/project3/5.jpg", "img/project3/6.jpg", "img/project3/7.jpg",
+"img/project3/8.jpg", "img/project4/1.jpg", "img/project4/2.jpg",
+"img/project4/3.jpg", "img/project4/4.jpg", "img/project4/5.jpg",
+"img/project4/6.jpg", "img/project4/7.jpg", "img/project4/8.jpg",
+"img/project4/9.jpg", "img/project4/10.jpg", "img/project5/1.jpg",
+"img/project5/2.jpg", "img/project5/3.jpg", "img/project5/4.jpg",
+"img/project5/5.jpg", "img/project5/6.jpg", "img/project7/1.jpg",
+"img/project7/2.jpg", "img/project7/3.jpg" );
 
 
-    /* pretty print
-     * -------------------------------------------------- */
-    var ssPrettyPrint = function() {
-        $('pre').addClass('prettyprint');
-        $( document ).ready(function() {
-            prettyPrint();
-        });
-    };
 
 
-    /* Move header
-     * -------------------------------------------------- */
-    var ssMoveHeader = function () {
+function initializeProjectButtons() {
+    $(".all-projects").click(function() {
 
-        var hero = $('.page-hero'),
-            hdr = $('header'),
-            triggerHeight = hero.outerHeight() - 170;
+        if (this.classList.contains("project1")) {
+            $(".carousel-inner").html(
+                "<div class='item active'><img src='img/project1/1.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project1/2.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project1/3.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project1/4.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project1/5.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project1/6.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project1/7.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project1/8.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
+            );
+
+            $(".modal-footer").html("<div class='modal-title'>Delivery Tip Tracker<br>Pro version: <a href='http://goo.gl/KD2y1t' target='_blank'>goo.gl/KD2y1t</a><br>Free version: <a href='https://goo.gl/E8xff3' target='_blank'>goo.gl/E8xff3</a></div>" +
+                "Delivery Tip Tracker is an Android app that helps delivery drivers to keep track of their tips as well as delivery addresses, customers, and more. " +
+                "After adding a tip amount, the app can automatically find the GPS coordinates, delivery address, and driving distance for the delivery. Users who want more " +
+                "can enter in the addresses ahead of time to start navigation, or enter in customer phone numbers to quickly call them. " +
+                "The app surfaces useful stats such as average tip per mile driven and average distance per delivery. " +
+                "It stores customer info, including phone numbers, names, notes, and previous orders. " +
+                "It also contains comprehensive order history functionality, allowing users to view everything from individual shifts to entire years worth of data.<br><br>" +
+                "As of September 2021, the Pro version has accumulated over 2,600 purchases at $2.99 and the Free version has over 20,000 installs. The Pro version has a user rating of 4.8/5 stars, while the Free version is rated 4.4/5 stars."
+            );
+        }
+        else if (this.classList.contains("project2")) {
+            $(".carousel-inner").html(
+                "<div class='item active'><img src='img/project2/1.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project2/2.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project2/3.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project2/4.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project2/5.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project2/6.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project2/7.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
+            );
+
+            $(".modal-footer").html("<div class='modal-title'>Store 7667 Delivery Maps<br>Video: <a href='https://www.youtube.com/watch?v=gUfGd5VvuFI' target='_blank'>youtube.com/watch?v=gUfGd5VvuFI</a>" +
+            	"<br>Play Store link: <a href='http://goo.gl/nfQDfa' target='_blank'>goo.gl/nfQDfa</a></div>" +
+                "I wrote this Android app to help delivery drivers at the Domino's store I worked at. It contains all the apartment and hotel maps for our delivery area, allowing drivers " +
+                "to quickly find their destinations. The user can employ voice search or a touch menu to find the relevant map. The app also contains a list of known gate codes in the area, " +
+                "which any user can update on-the-fly. Store-wide use of my app led to a significant increase in on-time deliveries, an important metric for any delivery restaurant."
+
+            );
+        }
+        else if (this.classList.contains("project3")) {
+            $(".carousel-inner").html(
+                "<div class='item active'><img src='img/project3/1.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div> " +
+                "<div class='item'> <img src='img/project3/2.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project3/3.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'> <img src='img/project3/4.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project3/5.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
+            );
+
+            $(".modal-footer").html("<div class='modal-title'>ClassTask<br><a href='https://gavingt.github.io/ClassTask' target='_blank'>gavingt.github.io/ClassTask</a></div>ClassTask is a " +
+                "to-do list app created specifically for students. Using an intuitive interface, students enter information about the classes they are currently taking. Tasks can then be added by class, " +
+                "giving the user an at-a-glance view of which tasks need to be completed for which classes.<br><br>Tasks and login info are stored using Firebase, " +
+                "allowing users to access their task data from anywhere. Tasks stay synced across devices even without refreshing.");
+        }
+        else if (this.classList.contains("project4")) {
+            $(".carousel-inner").html(
+                "<div class='item active'><img src='img/project4/1.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project4/2.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project4/3.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project4/4.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
+            );
+
+            $(".modal-footer").html("<div class='modal-title'>Store 7667 Address Verifier<br>Video link: <a href='https://www.youtube.com/watch?v=6K_QVE_PDjY' target='_blank'>youtube.com/watch?v=6K_QVE_PDjY</a>" +
+            	"<br>App link: <a href='https://goo.gl/HiASid' target='_blank'>https://goo.gl/HiASid</a></div>" +
+                "I wrote this app to rectify a shortcoming in the computer system of the Domino's store I worked at. When an employee took a delivery order over the phone, the system " +
+                "provided no way to verify whether a given address was actually in the store's delivery area. This led to significant losses for the store, as orders were prepared and then " +
+                "cancelled only after it became apparent that the customer was out of the delivery area.<br><br>With this app, the user begins to type an address and is given relevant autocomplete " +
+                "suggestions taken from the Google Places API. Upon making a selection, the address is shown on a map along with the store's delivery boundaries. The app tells the user if the address " +
+                "is within the store's boundaries, and if it's not then it tells the user the phone number of the correct store that the customer should call."
+            );
+        }
+
+        else if (this.classList.contains("project5")) {
+            $(".carousel-inner").html(
+                "<div class='item active'><img src='img/project5/1.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project5/2.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project5/3.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project5/4.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project5/5.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project5/6.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
+            );
+
+            $(".modal-footer").html("<div class='modal-title'>Visual Surround Sound<br><a href='https://www.youtube.com/watch?v=OtKxeBzwyX0' target='_blank'>youtube.com/watch?v=OtKxeBzwyX0</a></div>" +
+                "As the capstone project for my Electrical Engineering degree, my group and I created a device that translates audio information into visible light. Its focus is to assist deaf people while playing videogames. " +
+                "The device consists of a pair of glasses containing LEDs and a box to house the control circuitry. Each light around the rim of the glasses corresponds to a different surround sound audio channel. The lights " +
+                "illuminate with varying colors and intensities to indicate different frequences and magnitudes of sound.<br><br>The device uses spectrum analyzer chips to determine the frequency content of each surround sound audio " +
+                "signal. This frequency information is then fed into a microcontroller that runs various filtering functions before outputting the results to the LEDs in the glasses. A Bluetooth module enables the microcontroller to " +
+                "communicate with an Android companion app so that the user can customize various settings.<br><br>My contributions to the project were extensive. I conceived the idea, designed the circuit board, and wrote " +
+                "both the microcontroller code and the Android companion app."
+            );
+        }
+        else if (this.classList.contains("project6")) {
+            $(".carousel-inner").html(
+                "<div class='item active'><img src='img/project6/1.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project6/2.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project6/3.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project6/4.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project6/5.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project6/6.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
+            );
+
+            $(".modal-footer").html("<div class='modal-title'>Upcoming Games<br>Video link: <a href='https://www.youtube.com/watch?v=RS_684kyOEk' target='_blank'>youtube.com/watch?v=RS_684kyOEk</a>" +
+            	"<br>Github link: <a href='https://github.com/gavingt/upcoming-games' target='_blank'>github.com/gavingt/upcoming-games</a></div>" +
+                "Android app for viewing release dates and other info for every video game ever made. Keep track of your favorite and most anticipated games easily. Contains full sorting and search capabilities. Database updates itself periodically."+
+                " Built with the most up-to-date tech stack, including Kotlin, MVVM, Room, Retrofit, Paging Library, WorkManager, Navigation Component, Kotlin Coroutines, Moshi, Glide, and Guava."
+            );
+        }
+        else if (this.classList.contains("project7")) {
+            $(".carousel-inner").html(
+                "<div class='item active'><img src='img/project7/1.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project7/2.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project7/3.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
+            );
+
+            $(".modal-footer").html("<div class='modal-title'>Upcoming Games<br>Video link: <a href='https://www.youtube.com/watch?v=pPLaoyW__1s' target='_blank'>youtube.com/watch?v=pPLaoyW__1s</a>" +
+            	"<br>Github link: <a href='https://github.com/gavingt/SunCalculator' target='_blank'>github.com/gavingt/SunCalculator</a></div>" +
+                "Android app that fetches sunrise and sunset times for any date/city. Uses APIs for fetching sun data as well as timezone data. Built with a modern tech stack, leveraging MVVM, Retrofit, Moshi, Kotlin, and Coroutines."
+            );
+        }
+
+        $('#myModal').modal("show");
+    });
+}
 
 
-        $WIN.on('scroll', function () {
-
-            var loc = $WIN.scrollTop();
-
-            if (loc > triggerHeight) {
-                hdr.addClass('sticky');
-            } else {
-                hdr.removeClass('sticky');
-            }
-
-            if (loc > triggerHeight + 20) {
-                hdr.addClass('offset');
-            } else {
-                hdr.removeClass('offset');
-            }
-
-            if (loc > triggerHeight + 150) {
-                hdr.addClass('scrolling');
-            } else {
-                hdr.removeClass('scrolling');
-            }
-
-        });
-
-        // $WIN.on('resize', function() {
-        //     if ($WIN.width() <= 768) {
-        //             hdr.removeClass('sticky offset scrolling');
-        //     }
-        // });
-
-    };
+function showFullscreen(imageUrl) {
+    window.open(imageUrl, '_blank');
+}
 
 
-    /* Mobile Menu
-     * ---------------------------------------------------- */ 
-    var ssMobileMenu = function() {
+function initializeSortMenuButtons() {
+    $(".sortBtn").on("click", function() {
+        console.log("click");
+        $(".sortBtn").not(this).removeClass("sortBtnActive");
+        $(this).addClass("sortBtnActive");
+    });
 
-        var toggleButton = $('.header-menu-toggle'),
-            nav = $('.header-nav-wrap');
+    $(".all-button").click(function() {
+        var allProjects = $(".all-projects");
+        allProjects.css("display", "none");
+        allProjects.fadeIn( "slow");
+    });
 
-        toggleButton.on('click', function(event){
-            event.preventDefault();
+    $(".web-button").click(function() {
+        $(".all-projects").css("display", "none");
+        $(".web-projects").fadeIn( "slow");
 
-            toggleButton.toggleClass('is-clicked');
-            nav.slideToggle();
-        });
+    });
 
-        if (toggleButton.is(':visible')) nav.addClass('mobile');
+    $(".android-button").click(function() {
+        $(".all-projects").css("display", "none");
+        $(".android-projects").fadeIn( "slow");
 
-        $WIN.on('resize', function() {
-            if (toggleButton.is(':visible')) nav.addClass('mobile');
-            else nav.removeClass('mobile');
-        });
+    });
 
-        nav.find('a').on("click", function() {
+    $(".other-button").click(function() {
+        $(".all-projects").css("display", "none");
+        $(".other-projects").fadeIn( "slow");
 
-            if (nav.hasClass('mobile')) {
-                toggleButton.toggleClass('is-clicked');
-                nav.slideToggle(); 
-            }
-        });
-
-    };
+    });
+}
 
 
-    /* Masonry
-     * ---------------------------------------------------- */ 
-    var ssMasonryFolio = function () {
 
-        var containerBricks = $('.masonry');
 
-        containerBricks.imagesLoaded(function () {
-            containerBricks.masonry({
-                itemSelector: '.masonry__brick',
-                resize: true
+function initializeHeaderMenuButtons () {
+
+    $(".btn").on("click touchend", function (event) {
+        $(this).addClass("activeBtn");
+        $(this).removeClass("inactiveBtn");
+        $(".btn").not(this).removeClass("activeBtn");  //remove "active" class from all nav-pills other than the one clicked
+
+
+        if (event.type === "touchend") {
+            setTimeout(function () {
+                $(this).removeClass("activeBtn");
+                $("#about_button").addClass("activeBtn");
+            }, 1000);
+        }
+
+        if (this.id === "portfolio_button") {
+            page.on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function () {
+                page.stop();
             });
-        });
-    };
-
-
-    /* photoswipe
-     * ----------------------------------------------------- */
-    var ssPhotoswipe = function() {
-        var items = [],
-            $pswp = $('.pswp')[0],
-            $folioItems = $('.item-folio');
-
-            // get items
-            $folioItems.each( function(i) {
-
-                var $folio = $(this),
-                    $thumbLink =  $folio.find('.thumb-link'),
-                    $title = $folio.find('.item-folio__title'),
-                    $caption = $folio.find('.item-folio__caption'),
-                    $titleText = '<h4>' + $.trim($title.html()) + '</h4>',
-                    $captionText = $.trim($caption.html()),
-                    $href = $thumbLink.attr('href'),
-                    // $size = $thumbLink.data('size').split('x'),
-                    $width  = 300,
-                    $height = 400;
-         
-                var item = {
-                    src  : $href,
-                    w    : $width,
-                    h    : $height
-                }
-
-                if ($caption.length > 0) {
-                    item.title = $.trim($titleText + $captionText);
-                }
-
-                items.push(item);
+            page.animate({scrollTop: $(".portfolio").offset().top}, 'slow', function () {
+                page.off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
             });
-
-            // bind click event
-            $folioItems.each(function(i) {
-
-                $(this).on('click', function(e) {
-                    e.preventDefault();
-                    var options = {
-                        index: i,
-                        showHideOpacity: true
-                    }
-
-                    // initialize PhotoSwipe
-                    var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
-                    lightBox.init();
-                });
-
+        }
+        else if (this.id === "contact_button") {
+            page.on("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove", function () {
+                page.stop();
             });
-
-    };
-
-
-    /* slick slider
-     * ------------------------------------------------------ */
-    var ssSlickSlider = function() {
-        
-        $('.testimonials__slider').slick({
-            arrows: true,
-            dots: false,
-            infinite: true,
-            slidesToShow: 2,
-            slidesToScroll: 1,
-            prevArrow: "<div class=\'slick-prev\'><i class=\'im im-arrow-left\' aria-hidden=\'true\'></i></div>",
-            nextArrow: "<div class=\'slick-next\'><i class=\'im im-arrow-right\' aria-hidden=\'true\'></i></div>",       
-            pauseOnFocus: false,
-            autoplaySpeed: 1500,
-            responsive: [
-                {
-                    breakpoint: 900,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-            ]
-        });
-
-    };
+            page.animate({scrollTop: $(".contact").offset().top}, 'slow', function () {
+                page.off("scroll mousedown wheel DOMMouseScroll mousewheel keyup touchmove");
+            });
+        }
+    });
 
 
-    /* Highlight the current section in the navigation bar
-     * ------------------------------------------------------ */
-    var ssWaypoints = function() {
-
-        var sections = $(".target-section"),
-            navigation_links = $(".header-nav li a");
-
-        sections.waypoint( {
-
-            handler: function(direction) {
-
-                var active_section;
-
-                active_section = $('section#' + this.element.id);
-
-                if (direction === "up") active_section = active_section.prevAll(".target-section").first();
-
-                var active_link = $('.header-nav li a[href="#' + active_section.attr("id") + '"]');
-
-                navigation_links.parent().removeClass("current");
-                active_link.parent().addClass("current");
-
-            },
-
-            offset: '25%'
-
-        });
-        
-    };
+    $(window).scroll(function (event) {
+        var st = $(this).scrollTop();
+        if (st <= lastScrollTop) {
+            if (isElementInViewport(document.getElementById("about_button"))) {
+                $("#about_button").attr("class", "btn activeBtn");
+                $("#portfolio_button").removeClass("activeBtn");
+                $("#contact_button").removeClass("activeBtn");
+            }
+        }
+        lastScrollTop = st;
+    });
 
 
-   /* Stat Counter
-    * ------------------------------------------------------ */
-    var ssStatCount = function() {
+    $(window).on({
+        'touchmove': function (e) {
+            $("#about_button").attr("class", "btn activeBtn");
+            $("#portfolio_button").attr("class", "btn inactiveBtn").removeClass("activeBtn");
+            $("#contact_button").attr("class", "btn inactiveBtn").removeClass("activeBtn");
 
-        var statSection = $(".s-stats"),
-        stats = $(".stats__count");
+            var touch = 'ontouchstart' in document.documentElement
+                || navigator.maxTouchPoints > 0
+                || navigator.msMaxTouchPoints > 0;
 
-        statSection.waypoint({
+            if (touch) { // remove all :hover stylesheets
+                try { // prevent exception on browsers not supporting DOM styleSheets properly
+                    for (var si in document.styleSheets) {
+                        var styleSheet = document.styleSheets[si];
+                        if (!styleSheet.rules) continue;
 
-            handler: function(direction) {
+                        for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+                            if (!styleSheet.rules[ri].selectorText) continue;
 
-                if (direction === "down") {
-
-                    stats.each(function () {
-                        var $this = $(this);
-
-                        $({ Counter: 0 }).animate({ Counter: $this.text() }, {
-                            duration: 4000,
-                            easing: 'swing',
-                            step: function (curValue) {
-                                $this.text(Math.ceil(curValue));
+                            if (styleSheet.rules[ri].selectorText.match(':hover')) {
+                                styleSheet.deleteRule(ri);
                             }
-                        });
-                    });
-
-                } 
-
-                // trigger once only
-                this.destroy();
-
-            },
-
-            offset: "90%"
-
-        });
-    };
-
-
-   /* Smooth Scrolling
-    * ------------------------------------------------------ */
-    var ssSmoothScroll = function() {
-
-        $('.smoothscroll').on('click', function (e) {
-            var target = this.hash,
-            $target    = $(target);
-        
-            e.preventDefault();
-            e.stopPropagation();
-
-            $('html, body').stop().animate({
-                'scrollTop': $target.offset().top
-            }, cfg.scrollDuration, 'swing', function () {
-                window.location.hash = target;
-            });
-
-        });
-    };
-
-
-    /* Placeholder Plugin Settings
-     * ------------------------------------------------------ */
-    var ssPlaceholder = function() {
-        $('input, textarea, select').placeholder();  
-    };
-
-
-    /* Alert Boxes
-     * ------------------------------------------------------ */
-    var ssAlertBoxes = function() {
-
-        $('.alert-box').on('click', '.alert-box__close', function() {
-            $(this).parent().fadeOut(500);
-        }); 
-
-    };
-
-
-    /* Contact Form
-     * ------------------------------------------------------ */
-    var ssContactForm = function() {
-
-        /* local validation */
-	    $('#contactForm').validate({
-        
-            /* submit via ajax */
-            submitHandler: function(form) {
-                window.open('mailto:mr.tuulai@gmail.com?subject=' + form.contactSubject.value + '&body=' + form.contactName.value + ' ' + form.contactMessage.value);
+                        }
+                    }
+                } catch (ex) {
+                }
             }
-    
-        });
-    };
+        }
+    });
+
+    function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+
+        return (
+            rect.top >= -20
+        );
+    }
 
 
-   /* Back to Top
-    * ------------------------------------------------------ */
-    var ssBackToTop = function() {
+/*    var touch = 'ontouchstart' in document.documentElement
+        || navigator.maxTouchPoints > 0
+        || navigator.msMaxTouchPoints > 0;
 
-        var pxShow  = 500,   // height on which the button will show
-        fadeInTime  = 400,   // how slow/fast you want the button to show
-        fadeOutTime = 400,   // how slow/fast you want the button to hide
-        scrollSpeed = 300,   // how slow/fast you want the button to scroll to top. can be a value, 'slow', 'normal' or 'fast'
-        goTopButton = $(".go-top")
+    if (touch) { // remove all :hover stylesheets
+        try { // prevent exception on browsers not supporting DOM styleSheets properly
+            for (var si in document.styleSheets) {
+                var styleSheet = document.styleSheets[si];
+                if (!styleSheet.rules) continue;
 
-        // Show or hide the sticky footer button
-        $(window).on('scroll', function() {
-            if ($(window).scrollTop() >= pxShow) {
-                goTopButton.fadeIn(fadeInTime);
-            } else {
-                goTopButton.fadeOut(fadeOutTime);
+                for (var ri = styleSheet.rules.length - 1; ri >= 0; ri--) {
+                    if (!styleSheet.rules[ri].selectorText) continue;
+
+                    if (styleSheet.rules[ri].selectorText.match(':hover')) {
+                        styleSheet.deleteRule(ri);
+                    }
+                }
             }
-        });
-    };
+        } catch (ex) {
+        }
+    }*/
 
-
-   /* Initialize
-    * ------------------------------------------------------ */
-    (function ssInit() {
-
-        ssPreloader();
-        ssPrettyPrint();
-        ssMoveHeader();
-        ssMobileMenu();
-        ssMasonryFolio();
-        ssPhotoswipe();
-        ssSlickSlider();
-        ssWaypoints();
-        ssStatCount();
-        ssSmoothScroll();
-        ssPlaceholder();
-        ssAlertBoxes();
-        ssContactForm();
-        ssBackToTop();
-
-    })();
-
-
-})(jQuery);
+}
