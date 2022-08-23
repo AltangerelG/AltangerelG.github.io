@@ -35,24 +35,12 @@ function initializeProjectButtons() {
 
         if (this.classList.contains("project1")) {
             $(".carousel-inner").html(
-                "<div class='item active'><img src='img/project1/1.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
-                "<div class='item'><img src='img/project1/2.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
-                "<div class='item'><img src='img/project1/3.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
-                "<div class='item'><img src='img/project1/4.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
-                "<div class='item'><img src='img/project1/5.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
-                "<div class='item'><img src='img/project1/6.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
-                "<div class='item'><img src='img/project1/7.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
-                "<div class='item'><img src='img/project1/8.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
+                "<div class='item active'><img src='img/project1/1.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
             );
 
-            $(".modal-footer").html("<div class='modal-title'>Delivery Tip Tracker<br>Pro version: <a href='http://goo.gl/KD2y1t' target='_blank'>goo.gl/KD2y1t</a><br>Free version: <a href='https://goo.gl/E8xff3' target='_blank'>goo.gl/E8xff3</a></div>" +
-                "Delivery Tip Tracker is an Android app that helps delivery drivers to keep track of their tips as well as delivery addresses, customers, and more. " +
-                "After adding a tip amount, the app can automatically find the GPS coordinates, delivery address, and driving distance for the delivery. Users who want more " +
-                "can enter in the addresses ahead of time to start navigation, or enter in customer phone numbers to quickly call them. " +
-                "The app surfaces useful stats such as average tip per mile driven and average distance per delivery. " +
-                "It stores customer info, including phone numbers, names, notes, and previous orders. " +
-                "It also contains comprehensive order history functionality, allowing users to view everything from individual shifts to entire years worth of data.<br><br>" +
-                "As of September 2021, the Pro version has accumulated over 2,600 purchases at $2.99 and the Free version has over 20,000 installs. The Pro version has a user rating of 4.8/5 stars, while the Free version is rated 4.4/5 stars."
+            $(".modal-footer").html("<div class='modal-title'>Bus Card Balance Reader<br>Free version: <a href='https://t.ly/KU13' target='_blank'>t.ly/KU13</a></div>" +
+                "It checks the balance of the bus transportation NFC card as well as last 10 transactions. I decompiled the existing app and developed it in my home country's language.<br><br>" +
+                "As of August 2022, it has over 50,000 installs. It has a user rating of 4.6/5 stars of over 2.65K reviews."
             );
         }
         else if (this.classList.contains("project2")) {
@@ -62,8 +50,7 @@ function initializeProjectButtons() {
                 "<div class='item'><img src='img/project2/3.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
                 "<div class='item'><img src='img/project2/4.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
                 "<div class='item'><img src='img/project2/5.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
-                "<div class='item'><img src='img/project2/6.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
-                "<div class='item'><img src='img/project2/7.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
+                "<div class='item'><img src='img/project2/6.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
             );
 
             $(".modal-footer").html("<div class='modal-title'>Store 7667 Delivery Maps<br>Video: <a href='https://www.youtube.com/watch?v=gUfGd5VvuFI' target='_blank'>youtube.com/watch?v=gUfGd5VvuFI</a>" +
