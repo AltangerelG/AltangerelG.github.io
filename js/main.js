@@ -53,12 +53,9 @@ function initializeProjectButtons() {
                 "<div class='item'><img src='img/project2/6.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
             );
 
-            $(".modal-footer").html("<div class='modal-title'>Store 7667 Delivery Maps<br>Video: <a href='https://www.youtube.com/watch?v=gUfGd5VvuFI' target='_blank'>youtube.com/watch?v=gUfGd5VvuFI</a>" +
-            	"<br>Play Store link: <a href='http://goo.gl/nfQDfa' target='_blank'>goo.gl/nfQDfa</a></div>" +
-                "I wrote this Android app to help delivery drivers at the Domino's store I worked at. It contains all the apartment and hotel maps for our delivery area, allowing drivers " +
-                "to quickly find their destinations. The user can employ voice search or a touch menu to find the relevant map. The app also contains a list of known gate codes in the area, " +
-                "which any user can update on-the-fly. Store-wide use of my app led to a significant increase in on-time deliveries, an important metric for any delivery restaurant."
-
+            $(".modal-footer").html("<div class='modal-title'>Zaalandaa indoor courts info" +
+            	"<br>Play Store link: <a href='https://zaalandaa.en.aptoide.com/app' target='_blank'>https://zaalandaa.en.aptoide.com/app</a></div>" +
+                "It provides indoor courts information as a RecyclerView list. You can also filter with the cheapest court, most expensive court, and the nearest court. I used OpenStreetMap to show where is the court and it shows a route that how to get there. This project won the 'Best Business' and 'Audience Choice' awards at MIT Global Startup Lab Mongolia 2016."
             );
         }
         else if (this.classList.contains("project3")) {
