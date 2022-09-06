@@ -38,7 +38,7 @@ function initializeProjectButtons() {
                 "<div class='item active'><img src='img/project1/1.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
             );
 
-            $(".modal-footer").html("<div class='modal-title'>Bus Card Balance Reader<br>Free version: <a href='https://t.ly/KU13' target='_blank'>t.ly/KU13</a></div>" +
+            $(".modal-footer").html("<div class='modal-title'>Bus Card Balance Reader<br>Play Store link: <a href='https://t.ly/KU13' target='_blank'>t.ly/KU13</a></div>" +
                 "It checks the balance of the bus transportation NFC card as well as last 10 transactions. I decompiled the existing app and developed it in my home country's language.<br><br>" +
                 "As of August 2022, it has over 50,000 installs. It has a user rating of 4.6/5 stars of over 2.65K reviews."
             );
@@ -65,7 +65,8 @@ function initializeProjectButtons() {
                 "<div class='item'><img src='img/project3/3.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
             );
 
-            $(".modal-footer").html("<div class='modal-title'>Memo Chat<br><a href='https://chatlii-fb3b6.firebaseapp.com/' target='_blank'>chatlii-fb3b6.firebaseapp.com</a></div>Memo Chat is a " +
+            $(".modal-footer").html("<div class='modal-title'>Memo Chat" +
+                "<br>Web link: <a href='https://chatlii-fb3b6.firebaseapp.com/' target='_blank'>chatlii-fb3b6.firebaseapp.com</a></div>Memo Chat is a " +
                 "chat app that interacts with emojis and stickers. I built this using Vue.JS on frontend and Firebase for DB and backend. I deployed to Firebase hosting service. It has also Google login.");
         }
         else if (this.classList.contains("project4")) {
