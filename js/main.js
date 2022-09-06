@@ -108,14 +108,12 @@ function initializeProjectButtons() {
                 "<div class='item'><img src='img/project6/2.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
                 "<div class='item'><img src='img/project6/3.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
                 "<div class='item'><img src='img/project6/4.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
-                "<div class='item'><img src='img/project6/5.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
-                "<div class='item'><img src='img/project6/6.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
+                "<div class='item'><img src='img/project6/5.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
             );
 
-            $(".modal-footer").html("<div class='modal-title'>Upcoming Games<br>Video link: <a href='https://www.youtube.com/watch?v=RS_684kyOEk' target='_blank'>youtube.com/watch?v=RS_684kyOEk</a>" +
-            	"<br>Github link: <a href='https://github.com/gavingt/upcoming-games' target='_blank'>github.com/gavingt/upcoming-games</a></div>" +
-                "Android app for viewing release dates and other info for every video game ever made. Keep track of your favorite and most anticipated games easily. Contains full sorting and search capabilities. Database updates itself periodically."+
-                " Built with the most up-to-date tech stack, including Kotlin, MVVM, Room, Retrofit, Paging Library, WorkManager, Navigation Component, Kotlin Coroutines, Moshi, Glide, and Guava."
+            $(".modal-footer").html("<div class='modal-title'>Localou local group meetings website" +
+                "<br>Web link: <a href='https://localou-90108.web.app/' target='_blank'>https://localou-90108.web.app/</a></div>" +
+                "Website for connect people with same interests. Demo version has Built with Vue.js. All groups data has been stored in Firebase DB."
             );
         }
         else if (this.classList.contains("project7")) {
