@@ -53,7 +53,7 @@ function initializeProjectButtons() {
                 "<div class='item'><img src='img/project2/6.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
             );
 
-            $(".modal-footer").html("<div class='modal-title'>Zaalandaa indoor courts info" +
+            $(".modal-footer").html("<div class='modal-title'>Zaalandaa indoor courts app" +
             	"<br>Play Store link: <a href='https://zaalandaa.en.aptoide.com/app' target='_blank'>https://zaalandaa.en.aptoide.com/app</a></div>" +
                 "It provides indoor courts information as a RecyclerView list. You can also filter with the cheapest court, most expensive court, and the nearest court. I used OpenStreetMap to show where is the court and it shows a route that how to get there. This project won the 'Best Business' and 'Audience Choice' awards at MIT Global Startup Lab Mongolia 2016."
             );
@@ -62,15 +62,11 @@ function initializeProjectButtons() {
             $(".carousel-inner").html(
                 "<div class='item active'><img src='img/project3/1.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div> " +
                 "<div class='item'> <img src='img/project3/2.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
-                "<div class='item'><img src='img/project3/3.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
-                "<div class='item'> <img src='img/project3/4.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
-                "<div class='item'><img src='img/project3/5.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
+                "<div class='item'><img src='img/project3/3.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
             );
 
-            $(".modal-footer").html("<div class='modal-title'>ClassTask<br><a href='https://gavingt.github.io/ClassTask' target='_blank'>gavingt.github.io/ClassTask</a></div>ClassTask is a " +
-                "to-do list app created specifically for students. Using an intuitive interface, students enter information about the classes they are currently taking. Tasks can then be added by class, " +
-                "giving the user an at-a-glance view of which tasks need to be completed for which classes.<br><br>Tasks and login info are stored using Firebase, " +
-                "allowing users to access their task data from anywhere. Tasks stay synced across devices even without refreshing.");
+            $(".modal-footer").html("<div class='modal-title'>Memo Chat<br><a href='https://chatlii-fb3b6.firebaseapp.com/' target='_blank'>chatlii-fb3b6.firebaseapp.com</a></div>Memo Chat is a " +
+                "chat app that interacts with emojis and stickers. I built this using Vue.JS on frontend and Firebase for DB and backend. I deployed to Firebase hosting service. It has also Google login.");
         }
         else if (this.classList.contains("project4")) {
             $(".carousel-inner").html(
@@ -80,13 +76,10 @@ function initializeProjectButtons() {
                 "<div class='item'><img src='img/project4/4.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
             );
 
-            $(".modal-footer").html("<div class='modal-title'>Store 7667 Address Verifier<br>Video link: <a href='https://www.youtube.com/watch?v=6K_QVE_PDjY' target='_blank'>youtube.com/watch?v=6K_QVE_PDjY</a>" +
-            	"<br>App link: <a href='https://goo.gl/HiASid' target='_blank'>https://goo.gl/HiASid</a></div>" +
-                "I wrote this app to rectify a shortcoming in the computer system of the Domino's store I worked at. When an employee took a delivery order over the phone, the system " +
-                "provided no way to verify whether a given address was actually in the store's delivery area. This led to significant losses for the store, as orders were prepared and then " +
-                "cancelled only after it became apparent that the customer was out of the delivery area.<br><br>With this app, the user begins to type an address and is given relevant autocomplete " +
-                "suggestions taken from the Google Places API. Upon making a selection, the address is shown on a map along with the store's delivery boundaries. The app tells the user if the address " +
-                "is within the store's boundaries, and if it's not then it tells the user the phone number of the correct store that the customer should call."
+            $(".modal-footer").html("<div class='modal-title'>Zaalandaa PWA" +
+            	"<br>Web link: <a href='https://basketball-20d1f.firebaseapp.com/' target='_blank'>https://basketball-20d1f.firebaseapp.com/</a></div>" +
+                "I wrote this app to create a Progressive Web App (PWA) version of Zaalandaa mobile app." +
+                "<br>They share same DB in Firebase. I deployed this app into Firebase hosting."
             );
         }
 
@@ -100,13 +93,13 @@ function initializeProjectButtons() {
                 "<div class='item'><img src='img/project5/6.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
             );
 
-            $(".modal-footer").html("<div class='modal-title'>Visual Surround Sound<br><a href='https://www.youtube.com/watch?v=OtKxeBzwyX0' target='_blank'>youtube.com/watch?v=OtKxeBzwyX0</a></div>" +
-                "As the capstone project for my Electrical Engineering degree, my group and I created a device that translates audio information into visible light. Its focus is to assist deaf people while playing videogames. " +
-                "The device consists of a pair of glasses containing LEDs and a box to house the control circuitry. Each light around the rim of the glasses corresponds to a different surround sound audio channel. The lights " +
-                "illuminate with varying colors and intensities to indicate different frequences and magnitudes of sound.<br><br>The device uses spectrum analyzer chips to determine the frequency content of each surround sound audio " +
-                "signal. This frequency information is then fed into a microcontroller that runs various filtering functions before outputting the results to the LEDs in the glasses. A Bluetooth module enables the microcontroller to " +
-                "communicate with an Android companion app so that the user can customize various settings.<br><br>My contributions to the project were extensive. I conceived the idea, designed the circuit board, and wrote " +
-                "both the microcontroller code and the Android companion app."
+            $(".modal-footer").html("<div class='modal-title'>Mentor and Student website" +
+                "<br>Web link: <a href='https://guide-sign.firebaseapp.com/' target='_blank'>https://guide-sign.firebaseapp.com/</a>" +
+                "<br>Github link: <a href='https://github.com/AltangerelG/act2021-team2' target='_blank'>https://github.com/AltangerelG/act2021-team2</a></div>" +
+                "I created this website for students who live in my home country to contact and get some advice from mentors who works and study in the USA. User can register as a mentor or a student. If mentor has registered, " +
+                "he/she can add skills, add available time to talk. When student registered, student can see all the mentors, check their detailed profiles and request for an appointment. If mentor accept, event will be created." +
+                "<br><br>I also participated with this project to a competition with 2 members. " +
+                "I lead the team and we have won 2nd place with this project."
             );
         }
         else if (this.classList.contains("project6")) {
