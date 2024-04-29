@@ -12,18 +12,11 @@ $.preload = function() {
     }
 };
 
-$.preload("img/project1/1.jpg", "img/project1/2.jpg", 
-	"img/project1/3.jpg", "img/project1/4.jpg",
-"img/project1/5.jpg", "img/project1/6.jpg", "img/project1/7.jpg",
-"img/project1/8.jpg", "img/project2/1.jpg", "img/project2/2.jpg",
+$.preload("img/project1/1.jpg", "img/project2/1.jpg", "img/project2/2.jpg",
 "img/project2/3.jpg", "img/project2/4.jpg", "img/project3/1.jpg",
-"img/project3/2.jpg", "img/project3/3.jpg", "img/project3/4.jpg",
-"img/project3/5.jpg", "img/project3/6.jpg", "img/project3/7.jpg",
-"img/project3/8.jpg", "img/project4/1.jpg", "img/project4/2.jpg",
-"img/project4/3.jpg", "img/project4/4.jpg", "img/project4/5.jpg",
-"img/project4/6.jpg", "img/project4/7.jpg", "img/project4/8.jpg",
-"img/project4/9.jpg", "img/project4/10.jpg", "img/project5/1.jpg",
-"img/project5/2.jpg", "img/project5/3.jpg", "img/project5/4.jpg",
+"img/project3/2.jpg", "img/project3/3.jpg", "img/project4/1.jpg",
+"img/project4/2.jpg", "img/project4/3.jpg", "img/project4/4.jpg",
+"img/project5/1.jpg", "img/project5/2.jpg", "img/project5/3.jpg", "img/project5/4.jpg",
 "img/project5/5.jpg", "img/project5/6.jpg", "img/project7/1.jpg",
 "img/project7/2.jpg", "img/project7/3.jpg" );
 
@@ -124,9 +117,33 @@ function initializeProjectButtons() {
                 "<div class='item'><img src='img/project7/3.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
             );
 
-            $(".modal-footer").html("<div class='modal-title'>Upcoming Games<br>Video link: <a href='https://www.youtube.com/watch?v=pPLaoyW__1s' target='_blank'>youtube.com/watch?v=pPLaoyW__1s</a>" +
-            	"<br>Github link: <a href='https://github.com/gavingt/SunCalculator' target='_blank'>github.com/gavingt/SunCalculator</a></div>" +
-                "Android app that fetches sunrise and sunset times for any date/city. Uses APIs for fetching sun data as well as timezone data. Built with a modern tech stack, leveraging MVVM, Retrofit, Moshi, Kotlin, and Coroutines."
+            $(".modal-footer").html("<div class='modal-title'>Local Jewelry E-commerce website<br>Web link: <a href='https://jewelry-4e60d.web.app/' target='_blank'>jewelry-4e60d.web.app</a>" +
+            	"</div>" +
+                "Website that will be connected with Google Firebase Database and can receive order through shopping card. Will use Firestore, Vue.js, Authentication"
+            );
+        }
+        else if (this.classList.contains("project8")) {
+            $(".carousel-inner").html(
+                "<div class='item active'><img src='img/project8/1.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project8/2.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project8/3.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
+            );
+
+            $(".modal-footer").html("<div class='modal-title'>Local Real Estate Website<br>Web link: <a href='https://real-estate-95c06.web.app/' target='_blank'>real-estate-95c06.web.app</a>" +
+            	"</div>" +
+                "Website that will be connected with Google Firebase Database and will connect client and real estate companies. Will use Firestore, Vue.js, Authentication"
+            );
+        }
+        else if (this.classList.contains("project9")) {
+            $(".carousel-inner").html(
+                "<div class='item active'><img src='img/project9/1.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project9/2.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>" +
+                "<div class='item'><img src='img/project9/3.jpg' onclick=\"showFullscreen(this.src)\" class='d-block img-fluid'></div>"
+            );
+
+            $(".modal-footer").html("<div class='modal-title'>CT machine scan website<br>Job reference letter: <a href='./doc/fraunhofer.pdf' target='_blank'>Fraunhofer Job Reference</a>" +
+            	"</div>" +
+                "Website that shows when CT machine scan has started and when will it end from server. After scan has finished, client can configure file. Vue.js for the fron-end side and django for the back-end side. Used MariaDB."
             );
         }
 
