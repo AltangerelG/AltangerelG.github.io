@@ -143,7 +143,7 @@ p { margin: 0; }
 
 .porthole { margin: 0; justify-self: center; text-align: center; animation: up 1s .25s both; }
 .porthole img {
-  width: min(320px, 70vw); height: min(320px, 70vw); object-fit: cover; object-position: 50% 30%;
+  width: min(320px, 70vw); height: min(320px, 70vw); object-fit: cover; object-position: 50% 50%;
   border-radius: 50%;
   border: 10px solid #c9973f;
   box-shadow: 0 0 0 4px #7a5320, 0 0 0 14px rgba(233, 180, 76, .18), 0 30px 60px -20px rgba(0, 0, 0, .7);
