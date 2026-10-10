@@ -1,227 +1,365 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="x-ua-compatible" content="ie=edge">
-	<title>Altangerel (Alex) Ganbaatar - Portfolio</title>
-	<meta name="description" content="">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<meta name="theme-color" content="#ffffff">
-
-	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css">
-	<link rel="stylesheet" href="css/normalize.css">
-	<link rel="stylesheet" href="css/main.css">
-	<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Altangerel Ganbaatar · Building the crew</title>
+  <meta name="description" content="Software engineer and founder from Ulaanbaatar. 11 years building one chat app, now gathering the crew to launch it worldwide.">
+  <meta property="og:title" content="Altangerel Ganbaatar · I set sail alone. Now I'm gathering my crew.">
+  <meta property="og:description" content="11 years building one chat app. Looking for an illustration artist, a business partner who has launched globally, programmers, researchers and angel investors.">
+  <meta property="og:image" content="https://altangerelg.github.io/img/captain.jpg">
+  <meta property="og:url" content="https://altangerelg.github.io/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0B1B2B">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+  <link rel="apple-touch-icon" href="img/favicon/apple-icon-180x180.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+Mongolian&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/voyage.css">
 </head>
+<body>
 
-<!-- <body background="img/background3.jpg"> -->
+<header class="topbar">
+  <a class="brand" href="#top">A<span>·</span>G</a>
+  <nav>
+    <a href="#voyage" data-i18n="nav.voyage">Voyage</a>
+    <a href="#crew" data-i18n="nav.crew">Crew wanted</a>
+    <a href="#log" data-i18n="nav.log">Logbook</a>
+    <a href="#contact" data-i18n="nav.contact">Contact</a>
+  </nav>
+  <button class="lang" id="lang" type="button" aria-label="Switch language">МОН</button>
+</header>
 
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
+<main id="top">
 
-        <div class="header clearfix">
-        	<div class="container">
-        		<div class="row">
-        			<h3 class="col-xs-12 col-sm-6">Altangerel (Alex) Ganbaatar</h3>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="sky" aria-hidden="true">
+      <div class="stars"></div>
+      <div class="sun"></div>
+    </div>
 
-        			<div class="col-xs-12 col-sm-6">
-        				<ul>
-        					<a class="btn activeBtn" id="about_button">About</a>
-        					<a class="btn" id="portfolio_button">Portfolio</a>
-        					<a class="btn" id="contact_button">Contact</a>
-        				</ul>
-        			</div>
-        		</div>
-        	</div>
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Software engineer · Founder · Ulaanbaatar</p>
+        <h1 data-i18n="hero.title">I set sail alone.<br><em>Now I'm gathering my crew.</em></h1>
+        <p class="lead" data-i18n="hero.lead">For 11 years I've kept building one chat app, from Memo Chat to ZagzChat. Next: launch it worldwide and help millions of people connect. I'm looking for the people who will sail with me.</p>
+        <div class="cta">
+          <a class="btn btn-sun" href="#crew" data-i18n="hero.join">Join the crew</a>
+          <a class="btn btn-ghost" href="#voyage" data-i18n="hero.follow">Follow the voyage ↓</a>
         </div>
+      </div>
 
+      <figure class="porthole">
+        <img src="img/captain.jpg" alt="Altangerel Ganbaatar" width="640" height="960">
+        <figcaption>
+          <span class="name" data-i18n="hero.name">Altangerel (Alex) Ganbaatar</span>
+          <span class="mongol" lang="mn-Mong" aria-hidden="true">ᠠᠯᠲᠠᠨᠭᠡᠷᠡᠯ</span>
+        </figcaption>
+      </figure>
+    </div>
 
-        <!-- your site or application content here -->
-        <div class="container">
-        	<div class="introduction jumbotron">
-        		<div class="row vertical-align">
-        			<div class="col-xs-12 col-sm-3 col-sm-push-9">
-        				<img src="img/profile.jpeg" class="avatar img-responsive">
-        			</div>
-        			<div class="intro-text col-xs-12 col-sm-9 col-sm-pull-3">
-        				Exceptionally creative and highly motivated Android Developer
-        				with a superior work ethic and a passion for creating excellent user experiences.
-        				Deep knowledge of the Android ecosystem and a fundamental contributor to a team's success.
-        				<br><br>
-        				About five years of Android experience, 
-        				having built and maintained a well-reviewed app with thousands of users on the Play Store.
-        				<hr class="emblem-dark">
-                        Currently trying to find full-time job as a W2 under CPT.
-        			</div>
-        		</div>
-        	</div>
+    <svg class="waves" viewBox="0 0 1440 160" preserveAspectRatio="none" aria-hidden="true">
+      <path class="w1" d="M0 80 Q 180 40 360 80 T 720 80 T 1080 80 T 1440 80 T 1800 80 T 2160 80 T 2520 80 T 2880 80 V160 H0Z"/>
+      <path class="w2" d="M0 100 Q 180 70 360 100 T 720 100 T 1080 100 T 1440 100 T 1800 100 T 2160 100 T 2520 100 T 2880 100 V160 H0Z"/>
+      <path class="w3" d="M0 124 Q 180 104 360 124 T 720 124 T 1080 124 T 1440 124 T 1800 124 T 2160 124 T 2520 124 T 2880 124 V160 H0Z"/>
+    </svg>
+  </section>
 
+  <!-- STATS -->
+  <section class="stats" aria-label="Highlights">
+    <div class="stat">
+      <b>11</b>
+      <span data-i18n="stat.years">years on one mission: a chat app</span>
+    </div>
+    <div class="stat">
+      <b>30<small>/4000+</small></b>
+      <span data-i18n="stat.mit">selected for MIT Global Entrepreneurship Bootcamp, Seoul 2016</span>
+    </div>
+    <div class="stat">
+      <b>50K+</b>
+      <span data-i18n="stat.installs">installs of Bus Card Reader · 4.6★ from 2.6K reviews</span>
+    </div>
+    <div class="stat">
+      <b>3</b>
+      <span data-i18n="stat.countries">countries lived and built in: Mongolia, Germany, USA</span>
+    </div>
+  </section>
 
+  <!-- VOYAGE -->
+  <section class="voyage" id="voyage">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="voyage.eyebrow">The voyage so far</p>
+      <h2 data-i18n="voyage.title">Every island taught me something</h2>
+    </div>
 
-        	<div class="portfolio jumbotron" id="portfolio_section">
+    <div class="route" id="route">
+      <svg class="route-svg" aria-hidden="true">
+        <path class="route-path-bg"/>
+        <path class="route-path"/>
+        <g class="ship">
+          <path d="M-16 6 L16 6 L11 13 L-11 13 Z" fill="#E9B44C"/>
+          <path d="M-1 4 L-1 -18 L13 3 Z" fill="#F3E9D2"/>
+          <path d="M-3 4 L-3 -13 L-13 3 Z" fill="#E8433E"/>
+        </g>
+      </svg>
 
-        		<h2>PORTFOLIO</h2>
-        		<hr class="emblem-dark">
+      <ol class="chapters">
+        <li class="chapter">
+          <span class="marker">1</span>
+          <article class="card">
+            <p class="where" data-i18n="c1.where">Ulaanbaatar · 2015</p>
+            <h3 data-i18n="c1.title">The ship is built</h3>
+            <p data-i18n="c1.body">Memo Chat, version 1 of my chat app: a playful messenger built around emoji and stickers. The idea I've never stopped working on.</p>
+            <ul class="tags"><li>Vue.js</li><li>Firebase</li></ul>
+          </article>
+        </li>
+        <li class="chapter">
+          <span class="marker">2</span>
+          <article class="card highlight">
+            <p class="where" data-i18n="c2.where">Seoul · 2016</p>
+            <h3 data-i18n="c2.title">Chosen from 4,000+</h3>
+            <p data-i18n="c2.body">My chat app was one of about 30 projects selected from over 4,000 applicants for the MIT Global Entrepreneurship Bootcamp in Seoul.</p>
+            <ul class="tags"><li>MIT Bootcamp</li><li data-i18n="tag.top1">Top 1%</li></ul>
+          </article>
+        </li>
+        <li class="chapter">
+          <span class="marker">3</span>
+          <article class="card">
+            <p class="where" data-i18n="c3.where">Ulaanbaatar · 2016</p>
+            <h3 data-i18n="c3.title">First victories</h3>
+            <p data-i18n="c3.body">Zaalandaa, an app for finding indoor sports courts, won Best Business and Audience Choice at MIT Global Startup Lab Mongolia.</p>
+            <ul class="tags"><li>Android</li><li>OpenStreetMap</li><li data-i18n="tag.awards">2 awards</li></ul>
+          </article>
+        </li>
+        <li class="chapter">
+          <span class="marker">4</span>
+          <article class="card">
+            <p class="where" data-i18n="c4.where">Mongolia · Google Play</p>
+            <h3 data-i18n="c4.title">50,000 people on board</h3>
+            <p data-i18n="c4.body">Bus Card Reader: hold your bus card to your phone to check its balance. 50K+ installs and 4.6★ from 2.6K reviews. Proof that a small tool can serve a whole city.</p>
+            <ul class="tags"><li>Android</li><li>NFC</li></ul>
+          </article>
+        </li>
+        <li class="chapter">
+          <span class="marker">5</span>
+          <article class="card">
+            <p class="where" data-i18n="c5.where">Germany · 2019–2021</p>
+            <h3 data-i18n="c5.title">Crossing the first ocean</h3>
+            <p data-i18n="c5.body">Fraunhofer IIS, Development Center for X-ray Technology: built a web-based CT measurement management system and refactored a legacy system into it.</p>
+            <ul class="tags"><li>Django</li><li>Vue.js</li><li>MariaDB</li><li>VTK.js</li></ul>
+          </article>
+        </li>
+        <li class="chapter">
+          <span class="marker">6</span>
+          <article class="card">
+            <p class="where" data-i18n="c6.where">United States</p>
+            <h3 data-i18n="c6.title">The far shore</h3>
+            <p data-i18n="c6.body">Android developer. Shipped mobile and web products, from a mentor-matching platform for students to e-commerce and real-estate sites.</p>
+            <ul class="tags"><li>Android</li><li>Kotlin</li><li>Web</li></ul>
+          </article>
+        </li>
+        <li class="chapter">
+          <span class="marker">7</span>
+          <article class="card">
+            <p class="where" data-i18n="c7.where">Ulaanbaatar · Now</p>
+            <h3 data-i18n="c7.title">Home again, building national infrastructure</h3>
+            <p data-i18n="c7.body">Full-time on Mongolia's national FHIR system: health data exchange for a whole country on the HL7 FHIR standard. On the side: open-source FHIR tools and react-mongol, traditional Mongolian script for the web.</p>
+            <ul class="tags"><li>HL7 FHIR</li><li>TypeScript</li><li>React</li></ul>
+          </article>
+        </li>
+        <li class="chapter">
+          <span class="marker">8</span>
+          <article class="card">
+            <p class="where" data-i18n="c8.where">Next island</p>
+            <h3 data-i18n="c8.title">ZagzChat: the creative pivot</h3>
+            <p data-i18n="c8.body">Version 3 of the chat app, in progress. Chat that's more than words: zodiac compatibility, generated avatars, and a creative direction I want an artist to shape with me.</p>
+            <ul class="tags"><li data-i18n="tag.v3">v3 · in progress</li></ul>
+            <a class="link" href="https://play.google.com/store/apps/details?id=mn.altangerel.zagzchat" target="_blank" rel="noopener" data-i18n="c8.link">See it on Google Play →</a>
+          </article>
+        </li>
+        <li class="chapter horizon">
+          <span class="marker">?</span>
+          <article class="card">
+            <p class="where" data-i18n="c9.where">The horizon</p>
+            <h3 data-i18n="c9.title">A global launch. Millions of people.</h3>
+            <p data-i18n="c9.body">This part of the map is still blank. It's the part we draw together.</p>
+          </article>
+        </li>
+      </ol>
+    </div>
+  </section>
 
-        		<div class="sortMenu">
-        			<a class="sortBtn sortBtnActive all-button">ALL</a> &nbsp;/&nbsp;
-        			<a class="sortBtn android-button">ANDROID</a> &nbsp;/&nbsp;
-        			<a class="sortBtn web-button">WEB</a>
-        		</div>
+  <!-- CODE -->
+  <section class="code">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="code.eyebrow">The captain's code</p>
+      <h2 data-i18n="code.title">How I build a crew</h2>
+      <p class="sub" data-i18n="code.sub">I'm not hiring employees. I'm looking for people with a dream of their own.</p>
+    </div>
+    <ol class="steps">
+      <li>
+        <span class="num">01</span>
+        <h3 data-i18n="code.s1.t">Set sail alone</h3>
+        <p data-i18n="code.s1.b">Prove the commitment first. 11 years, 3 versions, still shipping.</p>
+      </li>
+      <li>
+        <span class="num">02</span>
+        <h3 data-i18n="code.s2.t">Fight for your dream</h3>
+        <p data-i18n="code.s2.b">Before I ask you to join, I want to understand what you're chasing and help you get there.</p>
+      </li>
+      <li>
+        <span class="num">03</span>
+        <h3 data-i18n="code.s3.t">Sail together</h3>
+        <p data-i18n="code.s3.b">Your dream becomes part of the voyage. When the ship reaches new shores, we all arrive.</p>
+      </li>
+    </ol>
+  </section>
 
-        		<div class="row">
-        			<div class="clearfix visible-sm"></div>
-        			<div class="col-xs-12 col-sm-6 col-md-4 all-projects android-projects project1">
-        				<img src="img/image-zoom.png" class="image-zoom">
-        				<img src="img/project1/thumb.jpg" style='height: 160px; width: 400px; object-fit: fill' class="img-responsive">
-        			</div>
-        			<div class="col-xs-12 col-sm-6 col-md-4 all-projects android-projects project2">
-        				<img src="img/image-zoom.png" class="image-zoom">
-        				<img src="img/project2/thumb.jpg" style='height: 160px; width: 400px; object-fit: fill' class="img-responsive">
-        			</div>
-        			<div class="col-xs-12 col-sm-6 col-md-4 all-projects web-projects project3">
-        				<img src="img/image-zoom.png" class="image-zoom">
-        				<img src="img/project3/thumb.jpg" style='height: 160px; width: 400px; object-fit: fill' class="img-responsive">
-        			</div>
-        			<div class="col-xs-12 col-sm-6 col-md-4 all-projects web-projects project4">
-        				<img src="img/image-zoom.png" class="image-zoom">
-        				<img src="img/project4/thumb.jpg" style='height: 160px; width: 400px; object-fit: fill' class="img-responsive">
-        			</div>
-        			<div class="col-xs-12 col-sm-6 col-md-4 all-projects web-projects project5">
-        				<img src="img/image-zoom.png" class="image-zoom">
-        				<img src="img/project5/thumb.jpg" style='height: 160px; width: 400px; object-fit: fill' class="img-responsive">
-        			</div>
-					<div class="col-xs-12 col-sm-6 col-md-4 all-projects web-projects project6">
-        				<img src="img/image-zoom.png" class="image-zoom">
-        				<img src="img/project6/thumb.jpg" style='height: 160px; width: 400px; object-fit: fill' class="img-responsive">
-        			</div>
-					<div class="col-xs-12 col-sm-6 col-md-4 all-projects web-projects project7">
-        				<img src="img/image-zoom.png" class="image-zoom">
-        				<img src="img/project7/thumb.jpg" style='height: 160px; width: 400px; object-fit: fill' class="img-responsive">
-        			</div>
-					<div class="col-xs-12 col-sm-6 col-md-4 all-projects web-projects project8">
-        				<img src="img/image-zoom.png" class="image-zoom">
-        				<img src="img/project8/thumb.jpg" style='height: 160px; width: 400px; object-fit: fill' class="img-responsive">
-        			</div>
-					<div class="col-xs-12 col-sm-6 col-md-4 all-projects web-projects project9">
-        				<img src="img/image-zoom.png" class="image-zoom">
-        				<img src="img/project9/thumb.jpg" style='height: 160px; width: 400px; object-fit: fill' class="img-responsive">
-        			</div>
-        		</div>
-        	</div>
+  <!-- CREW WANTED -->
+  <section class="crew" id="crew">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="crew.eyebrow">Open positions on the ship</p>
+      <h2 data-i18n="crew.title">Crew wanted</h2>
+    </div>
 
-        	<div class="contact jumbotron">
-        		<h2>CONTACT ME</h2>
-        		<hr class="emblem-dark">
+    <div class="posters">
+      <article class="poster" data-role="Illustration Artist">
+        <p class="poster-top" data-i18n="crew.wanted">Crew wanted</p>
+        <div class="poster-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><path d="M12 52 L40 24 L46 30 L18 58 Z M40 24 L48 10 L54 16 L46 30" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><circle cx="16" cy="16" r="6" fill="currentColor" opacity=".35"/></svg>
+        </div>
+        <h3 data-i18n="crew.art.role">Illustration Artist</h3>
+        <dl>
+          <dt data-i18n="crew.for">Wanted for</dt>
+          <dd data-i18n="crew.art.for">Giving ZagzChat its look, its characters and its soul.</dd>
+          <dt data-i18n="crew.dream">If your dream is</dt>
+          <dd data-i18n="crew.art.dream">your art in the hands of millions</dd>
+          <dt data-i18n="crew.bring">I bring</dt>
+          <dd data-i18n="crew.art.bring">the product, the engineering and an 11-year commitment</dd>
+        </dl>
+        <p class="reward" data-i18n="crew.partner">Partnership, not a freelance gig</p>
+        <a class="btn btn-ink" data-i18n="crew.answer">Answer the call</a>
+      </article>
 
-        		<div class="container">
-        			<div class="row">
+      <article class="poster" data-role="Business Partner">
+        <p class="poster-top" data-i18n="crew.wanted">Crew wanted</p>
+        <div class="poster-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><circle cx="32" cy="32" r="22" fill="none" stroke="currentColor" stroke-width="3"/><path d="M10 32 H54 M32 10 C22 20 22 44 32 54 M32 10 C42 20 42 44 32 54" fill="none" stroke="currentColor" stroke-width="2.5"/></svg>
+        </div>
+        <h3 data-i18n="crew.biz.role">Business Partner</h3>
+        <dl>
+          <dt data-i18n="crew.for">Wanted for</dt>
+          <dd data-i18n="crew.biz.for">Taking the app global. You've launched an app internationally before.</dd>
+          <dt data-i18n="crew.dream">If your dream is</dt>
+          <dd data-i18n="crew.biz.dream">building something that lasts</dd>
+          <dt data-i18n="crew.bring">I bring</dt>
+          <dd data-i18n="crew.biz.bring">an engineer who ships: mobile, web, backend, national-scale systems</dd>
+        </dl>
+        <p class="reward" data-i18n="crew.partner">Partnership, not a freelance gig</p>
+        <a class="btn btn-ink" data-i18n="crew.answer">Answer the call</a>
+      </article>
 
-        				<div class="contact-info col-md-6 col-sm-12 col-xs-12">
-        					<div style="display: inline-block; text-align: left;">
-        						Altangerel (Alex) Ganbaatar<br />
-        						<a href="mailto:altangerelg888@gmail.com">altangerelg888@gmail.com</a><br />
-        						Ulaanbaatar, Mongolia<br />
-        					</div>
-        				</div>
+      <article class="poster" data-role="Programmer / Researcher">
+        <p class="poster-top" data-i18n="crew.wanted">Crew wanted</p>
+        <div class="poster-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><path d="M22 18 L8 32 L22 46 M42 18 L56 32 L42 46 M36 12 L28 52" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </div>
+        <h3 data-i18n="crew.dev.role">Programmers &amp; Researchers</h3>
+        <dl>
+          <dt data-i18n="crew.for">Wanted for</dt>
+          <dd data-i18n="crew.dev.for">Hard problems: real-time chat, AI, Mongolian script, health data.</dd>
+          <dt data-i18n="crew.dream">If your dream is</dt>
+          <dd data-i18n="crew.dev.dream">your work used by real people</dd>
+          <dt data-i18n="crew.bring">I bring</dt>
+          <dd data-i18n="crew.dev.bring">open-source projects and real users</dd>
+        </dl>
+        <p class="reward" data-i18n="crew.dev.reward">Start by following on GitHub</p>
+        <a class="btn btn-ink" href="https://github.com/AltangerelG" target="_blank" rel="noopener" data-i18n="crew.follow">Follow on GitHub</a>
+      </article>
 
-        				<div class="col-md-6 col-sm-12 col-xs-12 social-link-container">
+      <article class="poster" data-role="Angel Investor">
+        <p class="poster-top" data-i18n="crew.wanted">Crew wanted</p>
+        <div class="poster-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64"><path d="M32 8 V56 M14 20 H50 M32 8 L28 14 M32 8 L36 14 M14 56 H50" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="32" cy="38" r="10" fill="none" stroke="currentColor" stroke-width="3"/></svg>
+        </div>
+        <h3 data-i18n="crew.inv.role">Angel Investors</h3>
+        <dl>
+          <dt data-i18n="crew.for">Wanted for</dt>
+          <dd data-i18n="crew.inv.for">Backing the voyage from a small harbor to a global launch.</dd>
+          <dt data-i18n="crew.dream">If your dream is</dt>
+          <dd data-i18n="crew.inv.dream">backing a founder who doesn't quit</dd>
+          <dt data-i18n="crew.bring">I bring</dt>
+          <dd data-i18n="crew.inv.bring">11 years of persistence and a working product</dd>
+        </dl>
+        <p class="reward" data-i18n="crew.inv.reward">Let's talk</p>
+        <a class="btn btn-ink" data-i18n="crew.answer">Answer the call</a>
+      </article>
+    </div>
+  </section>
 
-        					<table class="social-link-row">
-        						<tr>
-        							<td valign="middle" style="width: 45px; height: 45px;">        					
-        								<a href="https://github.com/AltangerelG" target="_blank">
-        									<img src="img/github_small.png" class="contact-link-image">
-        								</a>
-    								</td>
-    								<td valign="middle" class="contact-link-text">View <a href="https://github.com/AltangerelG" target="_blank">my projects</a> on Github</td>
-    							</tr>
-    						</table>
+  <!-- LOGBOOK -->
+  <section class="log" id="log">
+    <div class="section-head">
+      <p class="eyebrow" data-i18n="log.eyebrow">Ship's logbook</p>
+      <h2 data-i18n="log.title">Things I've built</h2>
+    </div>
+    <div class="log-grid">
+      <a class="entry" href="https://play.google.com/store/apps/dev?id=7383803580662931875" target="_blank" rel="noopener">
+        <img src="img/project1/thumb.jpg" alt="" loading="lazy">
+        <div><h3 data-i18n="log.bus">Bus Card Reader</h3><p data-i18n="log.bus.d">Android · 50K+ installs · 4.6★</p></div>
+      </a>
+      <a class="entry" href="https://chatlii-fb3b6.firebaseapp.com/" target="_blank" rel="noopener">
+        <img src="img/project3/thumb.jpg" alt="" loading="lazy">
+        <div><h3>Memo Chat</h3><p data-i18n="log.memo.d">Chat app v1 · Vue.js, Firebase</p></div>
+      </a>
+      <a class="entry" href="https://zaalandaa.en.aptoide.com/app" target="_blank" rel="noopener">
+        <img src="img/project2/thumb.jpg" alt="" loading="lazy">
+        <div><h3>Zaalandaa</h3><p data-i18n="log.zaal.d">Android · MIT GSL Mongolia, 2 awards</p></div>
+      </a>
+      <div class="entry">
+        <img src="img/project9/thumb.jpg" alt="" loading="lazy">
+        <div><h3>Fraunhofer IIS</h3><p data-i18n="log.fh.d">CT measurement system · Django, Vue.js, VTK.js</p></div>
+      </div>
+      <a class="entry" href="https://github.com/AltangerelG/react-mongol" target="_blank" rel="noopener">
+        <div class="type-thumb mongol-thumb"><span lang="mn-Mong">ᠮᠣᠩᠭᠣᠯ ᠪᠢᠴᠢᠭ</span></div>
+        <div><h3>react-mongol</h3><p data-i18n="log.rm.d">Traditional Mongolian script for React · open source</p></div>
+      </a>
+      <a class="entry" href="https://github.com/AltangerelG?tab=repositories&amp;q=fhir" target="_blank" rel="noopener">
+        <div class="type-thumb fhir-thumb"><span>FHIR</span></div>
+        <div><h3 data-i18n="log.fhir">National FHIR system</h3><p data-i18n="log.fhir.d">HL7 FHIR · SUSHI · SQL on FHIR · Synthea</p></div>
+      </a>
+      <a class="entry" href="https://guide-sign.firebaseapp.com/" target="_blank" rel="noopener">
+        <img src="img/project5/thumb.jpg" alt="" loading="lazy">
+        <div><h3>Amsa Guide</h3><p data-i18n="log.amsa.d">Mentor-matching for students · web</p></div>
+      </a>
+      <a class="entry" href="https://real-estate-95c06.web.app/" target="_blank" rel="noopener">
+        <img src="img/project8/thumb.jpg" alt="" loading="lazy">
+        <div><h3>Homyz</h3><p data-i18n="log.homyz.d">Real-estate platform · web</p></div>
+      </a>
+    </div>
+  </section>
 
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="bottle" aria-hidden="true">
+      <svg viewBox="0 0 120 60"><path d="M10 22 h56 l14 -8 h22 v32 h-22 l-14 -8 h-56 z" fill="none" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><rect x="102" y="20" width="10" height="20" rx="2" fill="currentColor"/><path d="M22 28 h34 M22 34 h24" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+    </div>
+    <h2 data-i18n="contact.title">Send a message in a bottle</h2>
+    <p class="sub" data-i18n="contact.sub">Tell me what you're dreaming of. I answer every message.</p>
+    <a class="btn btn-sun big" href="mailto:altangerelg888@gmail.com?subject=Hello%20from%20your%20website">altangerelg888@gmail.com</a>
+    <div class="socials">
+      <a href="https://github.com/AltangerelG" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://play.google.com/store/apps/dev?id=7383803580662931875" target="_blank" rel="noopener">Google Play</a>
+    </div>
+  </section>
+</main>
 
-    						<table class="social-link-row">
-    							<tr>
-    								<td valign="middle" style="width: 45px; height: 45px;">
-        								<a href="https://play.google.com/store/apps/dev?id=7383803580662931875" target="_blank">
-    										<img src="img/play_store_small.png" class="contact-link-image">
-										</a>
-									</td>
-    								<td valign="middle" class="contact-link-text">View <a href="https://play.google.com/store/apps/dev?id=7383803580662931875" target="_blank">my apps</a> published to the Play Store</td>
-    							</tr>
-    						</table>
+<footer class="footer">
+  <span data-i18n="footer">© 2026 Altangerel (Alex) Ganbaatar · Ulaanbaatar, Mongolia</span>
+</footer>
 
-        					</div>
-
-        				</div>
-        			</div>
-
-        		</div>
-
-        	</div>
-
-
-        	<!-- Modal -->
-        	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-        		<div class="modal-dialog modal-lg" role="document">
-        			<div class="modal-content">
-        				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        				<div class="modal-body">
-        					<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="false">
-
-        						<!--active carousel must have the carousel-inner class on it-->
-        						<div class="carousel-inner">
-        							<div class="item active">
-        								<img src="img/project6/1.jpg" class="d-block img-fluid">
-        							</div>
-        							<div class="item">
-        								<img src="img/project6/2.jpg" class="d-block img-fluid">
-        							</div>
-        							<div class="item">
-        								<img src="img/project6/3.jpg" class="d-block img-fluid">
-        							</div>
-        							<div class="item">
-        								<img src="img/project6/4.jpg" class="d-block img-fluid">
-        							</div>
-        							<div class="item">
-        								<img src="img/project6/5.jpg" class="d-block img-fluid">
-        							</div>
-        						</div>
-
-        						<!-- Left and right controls -->
-        						<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-        							<span class="glyphicon glyphicon-chevron-left"></span>
-        							<span class="sr-only">Previous</span>
-        						</a>
-        						<a class="right carousel-control" href="#myCarousel" data-slide="next">
-        							<span class="glyphicon glyphicon-chevron-right"></span>
-        							<span class="sr-only">Next</span>
-        						</a>
-        					</div>
-        				</div>
-        				<div class="modal-footer">
-        					<p class="project-description">This is the project description text</p>
-        				</div>
-        			</div>
-        		</div>
-        	</div>
-
-
-
-
-        	<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-        	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
-        	<!-- Latest compiled and minified JavaScript -->
-        	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-        	<script src="js/plugins.js"></script>
-        	<script src="js/main.js"></script>
-
-        </body>
-        </html>
+<script src="js/voyage.js"></script>
+</body>
+</html>
