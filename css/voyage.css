@@ -351,7 +351,7 @@ a.entry:hover { transform: translateY(-4px); border-color: rgba(233, 180, 76, .5
   text-align: center; padding: 120px 16px 130px;
   background: linear-gradient(180deg, var(--night) 0%, #3b3550 60%, #b4553f 100%);
 }
-.bottle { width: 120px; margin: 0 auto 24px; color: var(--gold); animation: bob 3.5s ease-in-out infinite; }
+.bottle { width: 160px; margin: 0 auto 24px; color: var(--gold); animation: bob 3.5s ease-in-out infinite; }
 @keyframes bob { 50% { transform: translateY(-8px) rotate(-4deg); } }
 .contact .sub { color: #e2d6cf; font-size: 19px; margin: 14px auto 34px; max-width: 520px; }
 .contact .btn.big { max-width: 100%; overflow-wrap: anywhere; }
